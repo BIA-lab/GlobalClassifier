@@ -1,0 +1,23 @@
+data:
+  filepath: 'CATH_balanced.csv'  # Caminho para o arquivo CSV com os dados
+  columns_drop: ["Unnamed: 0"]  # Lista de colunas a serem removidas
+  nrows: 500  # Número de linhas a serem lidas do arquivo (null para ler todas)
+  sep: ','  # Separador do arquivo CSV
+  levelDrop: []  # Lista de níveis a serem removidos
+
+model:
+  target_column: 'CLASS'  # Nome da coluna alvo
+  folds: 5  # Número de folds para validação cruzada
+  cores: 4  # Número de núcleos a serem usados no processamento paralelo
+  classifiers:  # Lista de classificadores a serem usados
+    - SGDClassifier
+    - GaussianNB
+    - MultinomialNB
+    - DecisionTreeClassifier
+    - RandomForestClassifier
+    - ExtraTreesClassifier
+    - AdaBoostClassifier
+
+output:
+  metrics_plot: 'metrics_plot.png'  # Caminho para salvar o gráfico de métricas
+  labels_plot: 'labels_per_level.png'  # Caminho para salvar o gráfico de labels por nível
