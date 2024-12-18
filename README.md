@@ -1,13 +1,11 @@
 # GlobalClassifier Usage Guide
 
-# GlobalClassifier Usage Guide
-
 ## Installation
 
 To install the required library, run the following command:
 
 ```bash
-pip install <lib_path>
+pip install git+https://github.com/BIA-lab/GlobalClassifier.git
 ```
 
 ## Importing Required Libraries
